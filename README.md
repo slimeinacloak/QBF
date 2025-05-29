@@ -14,7 +14,10 @@ java -version
 java version "17.0.x"
 If you see a version like 1.8.0_xxx, you're running Java 8 and will need to upgrade.
 
-Building
+# Downloading
+Download it from [here](https://github.com/sweetbaboo-1/QBF/releases).
+
+# Building
 To build the application, ensure you have Maven installed. Then run:
 
 ```bash
@@ -22,7 +25,7 @@ mvn clean package
 ```
 This will compile the project and produce a runnable .jar file in the target/ directory.
 
-Running
+# Running
 To run the application after building:
 
 ```bash

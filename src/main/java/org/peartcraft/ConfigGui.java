@@ -24,7 +24,32 @@ import java.util.stream.Stream;
 public class ConfigGui extends Application {
 
     private static final String BLOCK_PREFIX = "minecraft:";
-    public static final String[] DEFAULT_BLOCK_BLACKLIST = {"chest", "spawner", "obsidian", "crying_obsidian", "sponge", "ender_chest", "furnace", "sculk_sensor", "sculk_catalyst", "sculk_shrieker", "reinforced_deepslate"};
+    public static final String[] DEFAULT_BLOCK_BLACKLIST = {
+        "barrel",
+        "bee_nest",
+        "beehive",
+        "blast_furnace",
+        "brewing_stand",
+        "chest",
+        "crying_obsidian",
+        "dispenser",
+        "ender_chest",
+        "furnace",
+        "grindstone",
+        "hopper",
+        "lectern",
+        "obsidian",
+        "reinforced_deepslate",
+        "sculk_catalyst",
+        "sculk_sensor",
+        "sculk_shrieker",
+        "smoker",
+        "sponge",
+        "spawner",
+        "trapped_chest",
+        "trial_spawner",
+        "vault"
+    };
 
     private final CompletableFuture<ConfigData> future = new CompletableFuture<>();
     private final Set<String> blockSet = new LinkedHashSet<>(List.of(DEFAULT_BLOCK_BLACKLIST));

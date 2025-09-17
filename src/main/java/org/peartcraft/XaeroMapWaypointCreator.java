@@ -17,7 +17,12 @@ public class XaeroMapWaypointCreator implements WayPointCreator {
 
         int i = 0;
         for (SchematicBlockPos pos : positions) {
-            waypoints.add(String.format("waypoint:%d:UB:%d:%d:%d:0:false:0:gui.xaero_default:false:0:0:true", i, pos.x + x, pos.y + y, pos.z + z));
+            waypoints.add(String.format("waypoint:%d:UB:%d:%d:%d:0:false:0:gui.xaero_default:false:0:0:true", 
+            i, 
+            Math.abs(pos.x) + x, 
+            Math.abs(pos.y) + y, 
+            Math.abs(pos.z) + z
+            ));
             i++;
         }
 

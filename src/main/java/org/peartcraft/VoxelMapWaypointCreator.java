@@ -20,9 +20,9 @@ public class VoxelMapWaypointCreator implements WayPointCreator {
         for (SchematicBlockPos pos : positions) {
             waypoints.add(String.format("name:%d,x:%d,z:%d,y:%d,enabled:true,red:1.0,green:1.0,blue:1.0,suffix:,world:,dimensions:%s#",
                     i,
-                    (pos.x + x) * dimension.getMultiplier(),
-                    (pos.z + z) * dimension.getMultiplier(),
-                    (pos.y + y), // I would never accidentally multiply the y by 8...
+                    (Math.abs(pos.x) + x) * dimension.getMultiplier(),
+                    (Math.abs(pos.z) + z) * dimension.getMultiplier(),
+                    (Math.abs(pos.y) + y), // I would never accidentally multiply the y by 8...
                     dimension.getId()));
             i++;
         }

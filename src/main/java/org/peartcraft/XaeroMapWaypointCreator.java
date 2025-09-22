@@ -7,7 +7,7 @@ import java.util.List;
 
 public class XaeroMapWaypointCreator implements WayPointCreator {
     @Override
-    public List<String> createWaypoints(List<SchematicBlockPos> positions, ConfigData data) {
+    public List<String> createWaypoints(List<SchematicBlockPos> positions, List<String> blocks, ConfigData data) {
         int x, y, z;
         x = Math.min(data.x1(), data.x2());
         y = Math.min(data.y1(), data.y2());
@@ -20,7 +20,7 @@ public class XaeroMapWaypointCreator implements WayPointCreator {
             waypoints.add(String.format("waypoint:%d:UB:%d:%d:%d:0:false:0:gui.xaero_default:false:0:0:true", 
             i, 
             Math.abs(pos.x) + x, 
-            Math.abs(pos.y) + y, 
+            Math.abs(pos.y) + y - 1, 
             Math.abs(pos.z) + z
             ));
             i++;

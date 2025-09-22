@@ -21,7 +21,7 @@ public class VoxelMapWaypointCreator implements WayPointCreator {
             String block = i < blocks.size() ? blocks.get(i) : null;
             float[] rgb = BlockColor.getNormalizedColor(block);
             String base = BlockColor.getBaseName(block);
-            String name = base + (i + 1);
+            String name = (i + 1) + base;
 
             waypoints.add(String.format("name:%s,x:%d,z:%d,y:%d,enabled:true,red:%.3f,green:%.3f,blue:%.3f,suffix:,world:,dimensions:%s#",
                     name,

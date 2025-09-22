@@ -20,11 +20,12 @@ public class VoxelMapWaypointCreator implements WayPointCreator {
             SchematicBlockPos pos = positions.get(i);
             String block = i < blocks.size() ? blocks.get(i) : null;
             float[] rgb = BlockColor.getNormalizedColor(block);
-            String base = BlockColor.getBaseName(block);
-            String name = (i + 1) + base;
+            // Beautify waypoint name with spacing and capital letter
+            String blockName = BlockColor.getBaseName(block).replace("_", " ");
+            String waypointName = (i + 1) + " " + blockName.substring(0, 1).toUpperCase() + blockName.substring(1);
 
             waypoints.add(String.format("name:%s,x:%d,z:%d,y:%d,enabled:true,red:%.3f,green:%.3f,blue:%.3f,suffix:,world:,dimensions:%s#",
-                    name,
+                    waypointName,
                     (Math.abs(pos.x) + x) * dimension.getMultiplier(),
                     (Math.abs(pos.z) + z) * dimension.getMultiplier(),
                     (Math.abs(pos.y) + y),

@@ -54,7 +54,7 @@ public class BlockColor {
     }
 
     // Color constants grouped by similarity
-    public static final Color WOOD_BROWN = new Color("#8F7748");        // 143, 119, 72
+    public static final Color WOOD_BROWN = new Color("#8F7748");         // 143, 119, 72
     public static final Color DARK_GRAY = new Color("#707070");          // 112, 112, 112
     public static final Color LIGHT_GRAY = new Color("#A7A7A7");         // 167, 167, 167
     public static final Color BRIGHT_YELLOW = new Color("#E5E533");      // 229, 229, 51
@@ -62,6 +62,7 @@ public class BlockColor {
     public static final Color PURPLE = new Color("#7F3FB2");             // 127, 63, 178
     public static final Color DARK_TEAL = new Color("#167E86");          // 22, 126, 134
     public static final Color CHARCOAL = new Color("#646464");           // 100, 100, 100
+    public static final Color ORANGE = new Color("#d87f33");                   // 216, 127, 51
 
     private static final Map<String, Color> BLOCK_TO_COLOR = Map.ofEntries(
             // Wood-colored blocks (storage, functional)
@@ -74,13 +75,10 @@ public class BlockColor {
             // Dark gray blocks (machines, functional)
             Map.entry("blast_furnace", DARK_GRAY),
             Map.entry("dispenser", DARK_GRAY),
-            Map.entry("ender_chest", DARK_GRAY),
             Map.entry("furnace", DARK_GRAY),
             Map.entry("hopper", DARK_GRAY),
             Map.entry("smoker", DARK_GRAY),
             Map.entry("spawner", DARK_GRAY),
-            Map.entry("trial_spawner", DARK_GRAY),
-            Map.entry("vault", DARK_GRAY),
             
             // Light gray blocks (tools, utility)
             Map.entry("brewing_stand", LIGHT_GRAY),
@@ -94,11 +92,14 @@ public class BlockColor {
             Map.entry("crying_obsidian", VERY_DARK_GRAY),
             Map.entry("reinforced_deepslate", CHARCOAL),
             
-            // Special colored blocks
+            // Special-colored blocks
             Map.entry("obsidian", PURPLE),
             Map.entry("sculk_catalyst", DARK_TEAL),
             Map.entry("sculk_sensor", DARK_TEAL),
-            Map.entry("sculk_shrieker", DARK_TEAL)
+            Map.entry("sculk_shrieker", DARK_TEAL),
+            Map.entry("trial_spawner", ORANGE),
+            Map.entry("vault", ORANGE),
+            Map.entry("ender_chest", PURPLE)
     );
 
     /**
